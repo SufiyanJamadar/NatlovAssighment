@@ -1,25 +1,22 @@
-﻿@model IEnumerable<NatlovAssighment.Models.Course>
+﻿@model IEnumerable<NatlovAssighment.Models.StudentCourse>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Course List</h1>
+<h1>Index</h1>
 
 <p>
-    <a type="button" class="btn btn-primary" asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Student)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Credits)
+                @Html.DisplayNameFor(model => model.Course)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Teacher)
@@ -31,13 +28,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.Student.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Credits)
+                @Html.DisplayFor(modelItem => item.Course.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Teacher.Id)

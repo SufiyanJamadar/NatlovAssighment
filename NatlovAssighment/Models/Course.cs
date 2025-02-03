@@ -10,6 +10,7 @@ namespace NatlovAssighment.Models
         public string Description { get; set; }
         [Required]
         public int Credits { get; set; }
+
         [Required]
         [Display(Name = "Teacher")]
         public int TeacherId { get; set; }

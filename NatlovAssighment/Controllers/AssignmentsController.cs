@@ -20,6 +20,7 @@ namespace NatlovAssighment.Controllers
         }
 
         // GET: Assignments
+
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Assignments.Include(a => a.Course);
